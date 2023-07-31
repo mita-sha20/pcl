@@ -1,0 +1,35 @@
+.form{
+    margin: 0 auto !important;  
+} 
+
+.btn{
+    margin-top: 30px !important;
+}
+
+.edit{
+    margin-top: 20px !important;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.widths{
+    background-color: rgba(127, 255, 212, 0.445);
+    padding: 20px;
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.mr{
+    margin-left: 15px !important;
+}
+
+.pro-item img{
+   height: 100px;
+   width: 200px;
+}

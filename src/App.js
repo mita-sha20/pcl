@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import Registration from "./Registration";
+import Homepage from "./Homepage";
+import Voting from "./Votingpage";
+import firebaseConfig from "./Registration/firebaseconfig";
 function App() {
+
+const router=createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route elements={<Homepage/>}>
+        <Route path="/homepage" element={<Homepage/>}></Route>
+      </Route>
+      <Route elements={<Registration/>}>
+        <Route path="/registration" element={<Registration/>}></Route>
+      </Route>
+      <Route elements={<Voting/>}>
+        <Route path="/voting" element={<Voting/>}></Route>
+      </Route>
+    </Route>
+  )
+)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+     <div className="App">
+         <RouterProvider router={router}></RouterProvider>
+     </div>
+   </>
   );
 }
 

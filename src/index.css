@@ -1,13 +1,432 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    padding: 0;
+    margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul{
+    list-style-type: none;
 }
+
+a{
+    text-decoration: none;
+    
+}
+
+img{
+    vertical-align: middle;
+}
+
+.container{
+    width:1200px;
+    margin: 0 auto;
+}
+
+.homepage{
+    display: flex;
+    justify-content: space-between;
+}
+
+body{
+     height: 100vh !important;
+    overflow-y: hidden; 
+}
+/*  start */
+
+.headline{
+
+    background-color: #40BAD2;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    height: 80px;
+    text-transform:uppercase;
+
+}
+
+.headline marquee{
+
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.headline h3{
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform:capitalize;
+
+}
+.left{
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.left h3{
+    font-size: 26px;
+    text-transform: capitalize;
+}
+
+.left img{
+    margin-top: 20px;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    padding: 20px 0;
+}
+
+#main{
+
+    margin-top: 70px;
+}
+
+.left-text p{
+    
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 0 30px;
+    /* text-transform:capitalize; */
+}
+
+/* right form */
+
+.form-main{
+
+    margin-top: 20px;
+    width: 45%;
+}
+
+.form-main form{
+
+    border:1px solid #40BAD2;
+    text-align: center;
+    background: linear-gradient( #3BAECB, #8FDCF0);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 420px;
+    margin: 20px 0 0 80px;
+    height: 386px;
+}
+
+.form-head svg{
+    color: white;
+    background-color:#40BAD2;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.svg-inline--fa {
+    display: var(--fa-display,inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+}
+
+.right-main p input{
+    margin-bottom: 20px;
+    width: 300px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 0;
+}
+
+.right-main p input:focus{
+
+    outline-color: white;
+}
+
+.right-main p.forget-p{
+
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.right-button .login1{
+
+  
+    padding: 8px 30px;
+    border-radius: 8px;
+    background-color: #2A74A5;
+    border: 0;
+
+    text-transform: capitalize;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ 
+}
+.right-button .login1 a{
+    color: white;
+}
+.right-button .login1:hover{
+
+    background-color: #023E58;
+    color:wheat;
+}
+
+.right-button p.reg-p{
+
+    padding: 10px 0 ;
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+
+/* ==================
+  index1.html
+============================ */
+
+.regi-main{
+
+    text-align: center;
+}
+
+.regi-main h2{
+
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    padding: 20px 0;
+}
+
+.regi-main  form{
+    border: 1px solid #3BAECB;
+    padding: 50px 50px 30px 50px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.regi-main .first-line input , 
+.second-line input{
+    width: 30%;
+    padding:6px 20px;
+    margin: 10px;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+    outline: 0;
+    border: 1px solid black;
+
+}
+
+ input::placeholder{
+
+    text-transform: capitalize;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #3d3838;
+
+
+}
+
+.regi-main .third-line #address {
+
+    width: 62%;
+    padding:6px 20px;
+    margin: 10px;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+    outline: 0;
+    border: 1px solid black;
+
+}
+
+
+
+.regi-main .third-line input {
+
+    width: 30%;
+    padding:6px 20px;
+    margin: 10px;
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px ;
+    outline: 0;
+    border: 1px solid black;
+
+}
+
+.reg-button a{
+
+    display: inline-block;
+    padding: 6px 148px;
+    border-radius: 8px;
+    background-color: #0071EB;
+    border: 0;
+    color: white;
+    text-transform: capitalize;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-top: 25px;
+ 
+
+}
+
+
+.reg-button button.back-btn{
+
+    
+    padding: 6px 20px;
+    border-radius: 8px;
+    background-color: #26A044;
+    border: 0;
+    color: white;
+    text-transform: capitalize;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-top: 20px;
+ 
+
+}
+
+
+/* ==================
+  index1.html
+============================ */
+
+#vote-main{
+
+    margin-top: 50px;
+}
+
+.Voting{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.profile{
+    width: 20%;
+    border:  2px solid #3BAECB;
+    padding: 30px 40px 50px 50px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: rgba(226, 226, 226, 0.17) 0px -23px 25px 0px inset, rgba(185, 181, 181, 0.15) 0px -36px 30px 0px inset, rgba(173, 167, 167, 0.1) 0px -79px 40px 0px inset, rgba(180, 175, 175, 0.06) 0px 2px 1px, rgba(184, 180, 180, 0.09) 0px 4px 2px, rgba(185, 181, 181, 0.09) 0px 8px 4px, rgba(165, 160, 160, 0.09) 0px 16px 8px, rgba(180, 176, 176, 0.09) 50px 30px 16px;
+    margin-bottom: 50px;
+}
+
+/* .pro-head{
+    width: 100px;
+    height: 100px;
+    background-color: #d1d1d1;
+    padding:10px;
+    text-align: center;
+    border-radius:50% ;
+    -webkit-border-radius:50% ;
+    -moz-border-radius:50% ;
+    -ms-border-radius:50% ;
+    -o-border-radius:50% ;
+    margin-left: 36px;
+
+} */
+
+.pro-head svg{
+    text-align: center;
+    color: white;
+    background-color:#40BAD2;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+ .pro-item{
+
+    margin-top: 50px;
+} 
+
+.vote-right{
+    margin-left: 50px;
+    width: 75%;
+    border:  1px solid #3BAECB;
+    padding: 30px 40px ;
+    border-radius:15px ;
+    -webkit-border-radius:15px ;
+    -moz-border-radius:15px ;
+    -ms-border-radius:15px ;
+    -o-border-radius:15px ;
+    margin-bottom: 50px;
+   
+}
+
+
+.cand-item{
+    padding: 20px 50px;
+    background-color: #f8f2f2;
+    margin-top: 15px; 
+    border-radius: 20px ;
+    -webkit-border-radius: 20px ;
+    -moz-border-radius: 20px ;
+    -ms-border-radius: 20px ;
+    -o-border-radius: 20px ;
+    border: 1px solid #40BAD2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.vote-button{
+
+    text-align: center;
+}
+
+.vote-button a{
+    padding: 7px 20px;
+    background-color: #0071EB;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+
+.vote-item img{
+
+    font-size: 50px;
+    color: black;
+    width: 55px;
+    height: 60px;
+    object-fit: cover;
+}
+
+
+
