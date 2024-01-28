@@ -8,8 +8,8 @@ function App() {
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route elements={<Homepage/>}>
-        <Route path="/homepage" element={<Homepage/>}></Route>
+      <Route elements="/">
+        <Route path="/" element={<Homepage/>}></Route>
       </Route>
       <Route elements={<Registration/>}>
         <Route path="/registration" element={<Registration/>}></Route>

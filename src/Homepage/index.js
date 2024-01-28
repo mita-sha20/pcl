@@ -27,10 +27,11 @@ const Homepage = () => {
   });
 const db = getDatabase();
 const handlelogin=()=>{
- 
  set(push(ref(db, "login")), {
   name:info.name,
   password:info.password,
+ }).then({
+  
  })
 }
 
@@ -173,6 +174,7 @@ useEffect(()=>{
      {formik.errors.password && formik.touched.password ? (
        <p className="error_messasge">{formik.errors.password}</p>
      ) : null}
+
      {loading ? (
        <Button
          disabled
@@ -186,7 +188,8 @@ useEffect(()=>{
        <Button onClick={()=>handlelogin()} className="btn" type="submit" variant="contained"><Link to="/voting">Sign In</Link>
 
        </Button>
-     )}
+     )} 
+    
 </form>
 
     <div className="account">
@@ -206,115 +209,6 @@ useEffect(()=>{
     </div>
   
  
-     
-        
-        {/* <Grid className="box" container spacing={2}>
-          <Grid item xs={6}>
-            <div className="login-left">
-              <div className="avatar">
-                <picture>
-                  <img src="./images/avatar.png" alt="avatar" />
-                </picture>
-              </div>
-              <h3>Login to your account!</h3>
-              <div className="authentication" >
-                <div className="auth-pic">
-                  <picture>
-                    <img src="./images/logo.png" alt=""/>
-                  </picture>
-                </div>
-               
-                <div className="auth-text">
-                  <p>Login with Google</p>
-                </div>
-                </div>
-               
-              <form onSubmit={formik.handleSubmit}>
-                <TextField
-                  className="inputs"
-                  label="Email"
-                  type="email"
-                  name="email"
-                  variant="standard"
-                  onChange={formik.handleChange}
-                  value={formik.values.email}
-                />
-                {formik.errors.email && formik.touched.email ? (
-                  <p className="error_messasge">{formik.errors.email}</p>
-                ) : null}
-                <div className="passord-box">
-                <TextField
-                    className="inputs"
-                    label="Password"
-                    type={passShow}
-                    name="password"
-                    variant="standard"
-                    onChange={formik.handleChange}
-                    value={formik.values.password}
-                  />
-                  <div className="eyes" onClick={handleShow}>
-                    {passShow == "password" ? (
-                      <AiOutlineEye />
-                    ) : (
-                      <AiOutlineEyeInvisible />
-                    )}
-                  </div>
-                </div>
-                {formik.errors.password && formik.touched.password ? (
-                  <p className="error_messasge">{formik.errors.password}</p>
-                ) : null}
-                {loading ? (
-                  <Button
-                    disabled
-                    className="btn"
-                    type="submit"
-                    variant="contained"
-                  >
-                   
-                  </Button>
-                ) : (
-                  <Button className="btn" type="submit" variant="contained">
-                    Sign In
-                  </Button>
-     )}
-     </form>
-     <div className="account">
-       <Link to="/forgetpassword">Forget password</Link>
-       <p>
-         Don't have an account? <Link to="/registration">Sign Up</Link>{" "}
-       </p>
-     </div>
-   </div>
- </Grid>
-</Grid> */}
-
-
-
-
-                       
-                {/* <div class="form-main">
-                    <form action="post">
-                        <div class="form-head">
-                          <FaUserTie/>
-                        </div>
-                        <div class="right-main">
-                            <p><input  type="text" placeholder="UID No"/></p>
-                            <p><input type="password"  placeholder="password"/></p>
-                           
-                            <div class="right-button">
-                               
-                                <button class="login1" type='submit'><Link to="/voting">Click here</Link></button>
-                                <p class="reg-p">Not registered ?<Link to="/registration">Register here</Link> </p>
-                            </div>
-                        </div>
-    
-                    </form>
-                </div>
-                 */}
-       
-    
-   
-
 </>
   )
 }
